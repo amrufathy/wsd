@@ -1,0 +1,33 @@
+{
+  "exp": {
+    "name": "blstm"
+  },
+  "data": {
+    "resources_path": "resources/"
+  },
+  "model": {
+    "optimizer": "adam",
+    "embedding_size": 256,
+    "lstm_units": 256,
+    "use_elmo": true,
+    "dataset": "senseval3",
+    "path": "../attn_model_mask.h5",
+    "tok_path": "../tokenizer.pic"
+  },
+  "trainer": {
+    "num_epochs": 5,
+    "batch_size": 8,
+    "verbose_training": true
+  },
+  "callbacks": {
+    "checkpoint_monitor": "loss",
+    "checkpoint_mode": "min",
+    "checkpoint_save_best_only": true,
+    "checkpoint_save_weights_only": true,
+    "checkpoint_verbose": true,
+    "tensorboard_write_graph": true,
+    "earlystopping_monitor": "loss",
+    "earlystopping_patience": 3,
+    "earlystopping_restore_best_weights": true
+  }
+}

@@ -1,0 +1,9 @@
+tensorflow-gpu
+lxml
+nltk
+numpy
+tqdm
+dotmap
+tensorflow_hub
+pydot
+graphviz
